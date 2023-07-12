@@ -1,0 +1,113 @@
+:root {
+  --primary: #3251cd;
+  --prim2: hsl(229, 100%, 94%);
+  --secondary: #ffffff;
+  --highlight: #ff6565;
+  --high2: #ffeeee;
+}
+*{
+  box-sizing:content-box;
+}
+
+body{
+  font-family: sans-serif;
+  background-color: #e0edfa;
+  margin: 10px;
+  padding: 0;
+}
+
+button{
+  padding: 10px;
+  height: 30px;
+  background: var(--prim2);;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: 10px;
+  color: inherit;
+  min-width: fit-content;
+}
+
+ul{
+  padding: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 250px;
+}
+
+.Item{
+  margin: 10px;
+  display: block;
+  width: 180px;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.Percent {
+  width: 35px;
+  margin: 0px 5px;
+}
+.Brand {
+  padding-inline: 15px;
+  width: 70px;
+  margin: 0px 5px;
+}
+.container{
+  margin: 0px;
+  background-color: #fff;
+  text-align: center;
+  max-width: fit-content;
+  max-height: 500px;
+  
+  border-radius: 10px;
+  padding: 5px;
+  color: #8a8a8a;
+}
+.desc{
+  position: relative;
+  scroll-behavior: unset;
+}
+.danger{
+  border-color: var(--highlight);
+  color: var(--highlight);
+  background-color: var(--high2);
+}
+
+.chosen{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+
+/*
+SCROLLBAR
+*/
+
+::-webkit-scrollbar {
+  color: transparent;
+}
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #ffffff;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 1px;
+  
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0px 8px 8px 8px;
+  border-radius: 0px 10px 0px 0px;
+  border-color: transparent transparent var(--primary) transparent;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent var(--prim2) transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width:8px 8px 0px 8px;
+  border-radius: 0px 0px 10px 0px;
+  border-color: var(--primary) transparent transparent transparent;
+}
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: var(--prim2) transparent transparent transparent;
+}

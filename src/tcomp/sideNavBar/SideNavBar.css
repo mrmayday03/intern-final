@@ -1,0 +1,50 @@
+.side-navbar {
+  /* background-color: #3251CD; */
+}
+
+#side-navbar {
+  margin: 0;
+  border-radius: 0 15% 15% 0;
+  height: 100vh;
+  background-color: #3251CD;
+  width: 22vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  position: fixed;
+  margin-left: -10px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #3251CD;
+  text-align: left;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.nav-icon{
+  width: 10%;
+  height: 10%;
+  object-fit: contain;
+  color: white;
+  top: 0;
+}
+#container{
+  width: 280px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

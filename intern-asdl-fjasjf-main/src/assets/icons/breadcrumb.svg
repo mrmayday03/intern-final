@@ -1,0 +1,24 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" fill="#EBEBEB"/>
+<g id="dashboard_clothing &#38; accesories" clip-path="url(#clip0_0_1)">
+<rect width="2560" height="1600" transform="translate(-708 -257)" fill="white"/>
+<rect id="background" x="-708" y="-257" width="2560" height="1600" fill="#ECF2FF"/>
+<g id="breadcrumb">
+<g id="back button">
+<circle id="Ellipse 2" cx="48" cy="48" r="46.5" fill="white" stroke="#3251CD" stroke-width="3"/>
+<g id="&#240;&#159;&#166;&#134; icon &#34;arrow left&#34;">
+<path id="Vector" d="M22 22H74V74H22V22Z" fill="white" fill-opacity="0.01"/>
+<g id="Group">
+<path id="Vector_2" d="M28.2822 48H67.2822" stroke="#3251CD" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M41.2822 61L28.2822 48L41.2822 35" stroke="#3251CD" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="2560" height="1600" fill="white" transform="translate(-708 -257)"/>
+</clipPath>
+</defs>
+</svg>

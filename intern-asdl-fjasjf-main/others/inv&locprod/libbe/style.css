@@ -1,0 +1,188 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .App {
+    padding: 0.3px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 80px;
+    outline: none;
+    
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  #portal .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  
+
+
+  .container .modal {
+    z-index: 1;
+    width: 400px;
+    height: 220px;
+    background: white;
+    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: 50%;
+    margin-top: 5%;
+    position: relative;
+    animation: animate 0.3s;
+  }
+
+
+
+  .modal  {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 20px 30px;
+    background: white;
+    border: solid ;
+    
+    font-weight: bold;
+    font-size: 130%;
+    border-color: blue;
+    outline: none;
+    margin-left: 350px;
+    border-radius: 15px;
+    width: 20px;
+    height: 0px;
+    cursor: pointer;
+  }
+
+  #closex{
+    border-radius: 45px;
+    position: relative;
+    right: 465px;
+    bottom:100px;
+    padding: 0.2px 20px;
+    border-color: solid blue;
+    background-color: blue;
+    color: white;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  #bigbutton {
+    position: relative;
+    margin-bottom: 70px;
+    margin-left: 400px;
+    display: flex;
+    
+    width: 150px;
+    height: 210px;
+    padding:70px 140px;
+    border-radius: 20px;
+    border-color: darkblue;
+  }
+
+
+  .bigtext{
+    width:390px;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-top: 20px;
+    border:  solid  #1e74d0;
+    border-radius: 20px;
+  }
+  
+  
+  
+  
+  
+  .toptext {
+    display: block;
+    
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25%;
+    margin-left: 95%;
+  
+    color: #566d86;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .notification {
+    position: fixed;
+    font-size: 14px;
+    margin-top: 190px;
+    margin-right: 190px;
+    color: #566d86;
+    
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .mana {
+    text-decoration: underline;
+    color: blue;
+    margin-left: 10px;
+    position: relative;
+    bottom: 20px;
+    left: 160px;
+  }
+  
+  .arrow {
+    border: solid blue;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    position: relative;
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  .but {
+    margin-top: 220px;
+    margin-right: 25px;
+    
+  }
+  
+  .icon {
+    width: 100vh;
+    height: 100vh;
+    color: blue;
+  }
+  .send > .sendb{
+    margin-top: 40%;
+    border-radius: 15px;
+    border:100%;
+    width: 90%;
+    padding: 5px 20px;
+    border-color:solid  blue;
+    color: rgb(7, 7, 82);
+    background-color: rgb(91, 91, 244);
+    
+    margin-top: 150px;
+    position: relative; right: 90px;
+  }
+  
