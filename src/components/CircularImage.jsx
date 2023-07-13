@@ -1,7 +1,14 @@
 import React from "react";
 import Header from "./header";
+import { useNavigate } from 'react-router-dom';
+
 
 const CircleImage = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/categories');
+  };
   return (
     <>
       <Header />
@@ -27,12 +34,13 @@ const CircleImage = () => {
                 placeholder="Password"
                 className="border border-blue-300 rounded-lg p-2 mb-4 w-full"
               />
-              <button className="border border-blue-500 bg-blue-100 text-blue-500 hover:bg-blue-500 hover:text-white font-bold rounded-lg py-2 px-10 mb-2 w-50">
-                Login
-              </button>
+              
               <a href="#" className="text-blue-500 font-bold text-sm">
                 Need help?
               </a>
+              <button className="border border-blue-500 bg-blue-100 text-blue-500 hover:bg-blue-500 hover:text-white font-bold rounded-lg py-2 px-10 mb-2 w-50" onClick={handleClick}>
+                Login
+              </button>
             </div>
           </div>
         </div>
