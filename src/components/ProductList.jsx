@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
@@ -10,7 +11,7 @@ function Brand({ name, st }) {
 
   return (
     <button
-      className={`Brand ${isActive ? "chosen" : ""} rounded bg-blue-100 border hover:bg-blue-500 hover:text-white p-4`}
+      className={`Brand ${isActive ? "chosen" : ""} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4 m-2 w-40`}
       id={name}
       onClick={handleClick}
     >
@@ -22,7 +23,7 @@ function Brand({ name, st }) {
 function Percent({ val, st }) {
   return (
     <button
-      className={`Percent ${st ? "" : "danger"} rounded hover:bg-blue-500 hover:text-white p-4`}
+      className={`Percent ${st ? "" : "danger"} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4`}
     >
       {val}%
     </button>
@@ -35,7 +36,7 @@ function Item({ l, Products, Values }) {
   const s = v < 100 ? false : true;
 
   return (
-    <div className="Item mx-10 flex justify-between items-center">
+    <div className="mx-10 flex justify-between items-center">
       <Brand name={n} st={s} />
       <Percent val={v} st={s} />
     </div>
@@ -54,8 +55,8 @@ export default function ProductList() {
   });
 
   return (
-    <div className=" bg-white text-center rounded-lg text-gray-600">
-      <ul className="py-0 overflow-y-scroll overflow-x-hidden scrollbar-hide h-auto">
+    <div className=" bg-white text-center text-xl font-semibold text-gray-600">
+      <ul className="overflow-y-scroll overflow-x-hidden scrollbar-hide h-auto">
         {updatedList}
       </ul>
     </div>

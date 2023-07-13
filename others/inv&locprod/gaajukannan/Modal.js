@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Comp from "../components/comp";
 import "./Modal.css";
 
+// eslint-disable-next-line react/prop-types
 function Modal({setOpenModal}){
   const [compOpen , setCompOpen] = useState(false);
     return(
@@ -13,7 +14,7 @@ function Modal({setOpenModal}){
                 setOpenModal(false);
               }}
               >
-                <i class='bx bx-x'></i>
+                <i className='bx bx-x'></i>
               </button>
             </div>
                 <h2 className="head">Take Action-List of employees</h2>
@@ -29,7 +30,7 @@ function Modal({setOpenModal}){
                       onClick={() => {
                         setCompOpen(true);
                       }}>
-                      Assign<i class='bx bxs-chevron-down'></i> </button></div>
+                      Assign<i className='bx bxs-chevron-down'></i> </button></div>
                     <div className="col">00</div>
                   </div>
                   <div className="grid3">
@@ -42,7 +43,7 @@ function Modal({setOpenModal}){
                     <div className="col"><button className="but"
                     onClick={() => {
                         setCompOpen(true);
-                      }}>Assign<i class='bx bxs-chevron-down'></i> </button></div>
+                      }}>Assign<i className='bx bxs-chevron-down'></i> </button></div>
                     <div className="col">00</div>
                   </div>
                   <div className="grid5">
@@ -55,7 +56,7 @@ function Modal({setOpenModal}){
                     <div className="col"><button className="but"
                     onClick={() => {
                         setCompOpen(true);
-                      }}>Assign<i class='bx bxs-chevron-down'></i> </button></div>
+                      }}>Assign<i className='bx bxs-chevron-down'></i> </button></div>
                     <div className="col">00</div>
                   </div>
                 </div>

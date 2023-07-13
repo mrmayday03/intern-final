@@ -12,7 +12,7 @@ function Comp({ setOpenComp }) {
               <button className="back1" onClick={() => {
                 setOpenComp(false);
               }}>
-                <i class='bx bx-left-arrow-alt'></i>
+                <i className='bx bx-left-arrow-alt'></i>
               </button>
             </div>
             <div className="content">
