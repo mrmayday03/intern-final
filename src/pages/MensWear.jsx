@@ -14,9 +14,11 @@ const MensWear = () => {
         <Header />
         {/* Right Side */}
         <div className="flex p-10 text-xl">
-          <div className="flex-1"></div> 
-          aughhh
-          Sort by 
+          <div className="flex-1 font-bold"></div> 
+          <div className="font-semibold">
+          Sort by &nbsp;
+          </div>
+          <div className="underline-offset-auto">Non-Compliance Score</div> 
         </div>
         <div className="flex flex-1 p-4">
           <div className="pr-2 pl-10 flex flex-col">

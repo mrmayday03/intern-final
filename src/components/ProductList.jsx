@@ -44,10 +44,10 @@ function Item({ l, Products, Values }) {
 }
 
 export default function ProductList() {
-  const products = ["Levi's", "Wrangler", "Pepe", "M&S", "Lee", "ABC"];
-  const values = [97, 97, 100, 100, 100, 100];
+  const products = ["Levi's", "Wrangler", "Pepe", "M&S", "Lee", "ABC", "XYZ"];
+  const values = [97, 97, 100, 100, 100, 100, 100];
 
-  const numbers = [0, 1, 2, 3, 4, 5];
+  const numbers = [0, 1, 2, 3, 4, 5, 6];
   const updatedList = numbers.map((number) => {
     return (
       <Item key={number} l={number} Products={products} Values={values} />
@@ -56,7 +56,7 @@ export default function ProductList() {
 
   return (
     <div className=" bg-white text-center text-xl font-semibold text-gray-600">
-      <ul className="overflow-y-scroll overflow-x-hidden scrollbar-hide h-auto">
+      <ul className="overflow-y-scroll overflow-x-hidden scrollbar-hide h-92">
         {updatedList}
       </ul>
     </div>

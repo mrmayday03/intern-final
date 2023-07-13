@@ -3,11 +3,11 @@ import React, { useState } from "react";
 const Sidebar = () => {
   const sidebarItems = [
     {
-      title: "Store Shelf Compliance",
+      title: "Compliance",
       image: "icon _list_.svg",
     },
     {
-      title: "Product Traction Analysis",
+      title: "Traction Analysis",
       image: "_pie five_.svg",
     },
     {
@@ -15,7 +15,7 @@ const Sidebar = () => {
       image: "icon mail.svg",
     },
     {
-      title: "Help and Support",
+      title: "Help & Support",
       image: "help icon.svg",
     },
     {

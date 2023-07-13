@@ -11,10 +11,10 @@ const LocateProducts = ({ openModal }) => {
   ];
 
   return (
-    <div className="bg-white w-90 h-full p-10 shadow-md rounded-3xl mt-10">
+    <div className="bg-white w-90 h-full pl-10 shadow-md rounded-3xl mt-10">
       <div className="mb-0">
-        <div className="text-xl font-bold text-slate-500 pb-5">Locate Products</div>
-        <div className="text-slate-600 text-xs font-semibold pb-5">
+        <div className="text-l font-bold text-slate-500">Locate Products</div>
+        <div className="text-slate-600 text-xs font-semibold">
           Products Misplaced
         </div>
       </div>
