@@ -75,8 +75,13 @@ const NonCompliantProducts = () => {
     { id: 1, productsCount: 4 },
     { id: 2, productsCount: 3 },
     { id: 3, productsCount: 2 },
- 
-
+    { id: 4, productsCount: 4 },
+    { id: 5, productsCount: 3 },
+  ];
+  const sizes = [
+    { id: 1, size: "Small" },
+    { id: 2, size: "Medium" },
+    { id: 3, size: "Large" },
   ];
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -92,9 +97,11 @@ const NonCompliantProducts = () => {
   const columnsToShow = 5;
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-4">
-        <div className="text-lg font-semibold">Non-Compliant Products</div>
+    <div className="mb-10">
+      <div className="flex justify-between items-center mb-10">
+        <div className="text-lg font-semibold">Non-Compliant Products
+        <div className="text-lg pt-5 font-thin">Shelf no.: 04B</div>
+        </div>
         <button
           className="bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded-xl flex items-center"
           onClick={handleRefresh}
@@ -114,19 +121,19 @@ const NonCompliantProducts = () => {
             50{index + 1}
           </div>
         ))}
-        {shelves.map((shelf) => (
-          <Fragment key={shelf.id}>
-            <div className="text-center font-bold">{shelf.id}</div>
+        {sizes.map((size) => (
+          <Fragment key={size.id}>
+            <div className="text-left font-semibold">{size.size}</div>
             {Array.from({ length: columnsToShow }, (_, index) => (
               <button
                 key={index + 1}
                 className={`rounded-xl px-3 py-2 ${
-                  shelf.productsCount < 4
+                  shelves[index]?.productsCount < 4
                     ? "bg-red-100 border-2 hover:bg-red-500 hover:text-white border-red-500 text-red-500 font-bold"
                     : "bg-green-100 border-2 hover:bg-green-500 hover:text-white border-green-500 text-green-500 font-bold"
                 }`}
               >
-                {shelf.productsCount}/4
+                {shelves[index]?.productsCount}/4
               </button>
             ))}
           </Fragment>

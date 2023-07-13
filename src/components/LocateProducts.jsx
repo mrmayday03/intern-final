@@ -9,7 +9,7 @@ const LocateProducts = () => {
 
 
   return (
-    <div className="bg-white w-fit h-fit p-3 px-6 pb-6 shadow-md pr-8 rounded-3xl mt-10 ml-10">
+    <div className="bg-white w-90 h-full p-10 shadow-md rounded-3xl mt-10">
       <div className="mb-0">
         <div className="text-lg font-bold text-slate-500">Locate Products</div>
         <div className="text-slate-600 text-xs font-normal">
@@ -17,7 +17,7 @@ const LocateProducts = () => {
         </div>
       </div>
       <div>
-        <table className="table-auto mt-1 w-fit rounded border-separate border-spacing-y-[2px]">
+        <table className="table-auto mt-1 w-80 rounded border-separate border-spacing-y-[2px]">
           <thead className="text-normal">
             <tr className="bg-blue-100 text-slate-400 text-sm">
               <th className="py-2 px-4 rounded-l">QTY</th>

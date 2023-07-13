@@ -21,7 +21,7 @@ const MensWear = () => {
             </div>
           </div>
 
-          <div className="flex-1 pl-4 space-y-4">
+          <div className="flex-1 pl-4">
             <div className="bg-white rounded-3xl shadow-lg p-4 flex-1">
               <NonCompliantProducts />
             </div>
