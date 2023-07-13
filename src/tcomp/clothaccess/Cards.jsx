@@ -1,119 +1,67 @@
-import React from 'react'
+import React from 'react';
 import caution from '../../assets/icons/warning_.svg';
-import './Cards.css'
 import downChevron from '../../assets/icons/scroll arrow.svg';
 
-
+const categoryData = [
+  {
+    category: "Men's category",
+    cards: [
+      { name: "Jeans & Pants", percent: "70%", caution: true },
+      { name: "Formal T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+    ],
+  },
+  {
+    category: "Women's category",
+    cards: [
+      { name: "Jeans & Pants", percent: "70%", caution: true },
+      { name: "Formal T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+    ],
+  },
+  {
+    category: "Kid's category",
+    cards: [
+      { name: "Jeans & Pants", percent: "70%", caution: true },
+      { name: "Formal T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+      { name: "Casual T-shirt", percent: "79%", caution: false },
+    ],
+  },
+];
 
 const Cards = () => {
   return (
-    <>
-      <div className="cards-container">
-              <div className="card-container">
-                <p id="category-name">
-                  Men’s category
-                </p>
-                <div className="card-r">
-                  <p>Jeans & Pants</p>
-                  <img className="card-image" src={caution} alt="" />
-                  <p>70%</p>
+    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[22vh] h-[50vh] ">
+      {categoryData.map((category, index) => (
+        <div className="bg-white rounded-lg p-4 flex flex-col justify-around h-[40vh] mx-[1rem] w-80" key={index}>
+          <p className="text-blue-800 font-semibold mb-1">{category.category}</p>
+          {category.cards.map((card, cardIndex) => (
+            <div
+              className={`${
+                cardIndex === 0 ? 'border-red-500' : 'border-blue-500'
+              } border-2 border-solid rounded-2xl bg-${
+                cardIndex === 0 ? 'red' : 'blue'
+              }-200 flex justify-around m-2 h-10 items-center text-${
+                cardIndex === 0 ? 'red' : 'blue'
+              }-500 px-7`}
+              key={cardIndex}
+            >
+              <p>{card.name}</p>
+              {card.caution && <img className="h-4" src={caution} alt="Caution" />}
+              <p>{card.percent}</p>
+            </div>
+          ))}
+          <img className="h-1" src={downChevron} alt="" />
+        </div>
+      ))}
+    </div>
+  );
+};
 
-                </div>
-                <div className="card-g">
-                  <p>Formal T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <img className='downChevron'src={downChevron} alt="" />
-
-              </div>
-              <div className="card-container">
-              <p id="category-name">
-                Women’s category
-                </p>
-                <div className="card-r">
-                  <p>Jeans & Pants</p>
-                  <img className="card-image" src={caution} alt="" />
-                  <p>70%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Formal T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <img className='downChevron'src={downChevron} alt="" />
-              </div>
-              <div className="card-container">
-              <p id="category-name">
-                Kid’s catagory
-                </p>
-                <div className="card-r">
-                  <p>Jeans & Pants</p>
-                  <img className="card-image" src={caution} alt="" />
-                  <p>70%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Formal T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <div className="card-g">
-                  <p>Casual T-shirt</p>
-                  <p>79%</p>
-
-                </div>
-                <img className='downChevron'src={downChevron} alt="" />
-              </div>
-             
-
-          
-      </div>
-
-    
-    </>
-  )
-}
-
-export default Cards
+export default Cards;
