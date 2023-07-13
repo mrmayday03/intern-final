@@ -54,8 +54,13 @@ const CategoryCards = () => {
   return (
     // 
     <>
-    <Header />
+    <div className="flex h-screen">
     <Sidebar />
+    <div className="flex flex-1 flex-col">
+    <Header />
+    </div>
+    </div>
+
 
     <div className="h-screen flex flex-row">
         

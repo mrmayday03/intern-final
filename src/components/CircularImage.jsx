@@ -1,58 +1,44 @@
-import React, { useState } from "react";
-import ProductList from "../components/ProductList";
-import NonCompliantProducts from "../components/NonCompliantProducts";
-import LocateProducts from "../components/LocateProducts";
-import InventoryDetails from "../components/InventoryDetails";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/header";
+import React from "react";
+import Header from "./header";
 
-const MensWear = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
+const CircleImage = () => {
   return (
-    <div className="flex h-screen">
-      <Sidebar />
-      <div className="flex flex-1 flex-col">
-        <Header />
-        {/* Right Side */}
-        <div className="flex p-10">
-          <div className="flex-1">Sort by</div>
-        </div>
-        <div className="flex flex-1 p-4">
-          <div className="w-1/3 pr-2 flex flex-col">
-            <div className="bg-white rounded-lg shadow-lg p-4 flex-1">
-              <h2 className="text-lg font-semibold mb-4">Product List</h2>
-              <ProductList />
+    <>
+      <Header />
+      <div className="flex flex-col items-center justify-center h-screen bg-color-lightblue">
+        <div className="flex flex-col items-center">
+          <div className=" circle flex justify-center items-center bg-white rounded-full w-40 h-40 shadow-lg mb-6">
+            <div className="bg-blue-100 rounded-full w-36 h-36 flex justify-center items-center">
+              <img src="person.svg" className="w-24 h-24" />
             </div>
           </div>
-
-          <div className="flex-1 pl-4 flex flex-col">
-            <div className="bg-white rounded-3xl shadow-lg p-4 flex-1">
-              <NonCompliantProducts />
-            </div>
-
-            <div className="flex space-x-4">
-              <div className="flex-1">
-                <LocateProducts openModal={openModal} />
-              </div>
-              <div className="flex-1">
-                <InventoryDetails />
-              </div>
+          <div className="bg-white rounded-2xl shadow-xl p-10 pt-20 w-80">
+            <h2 className="text-lg font-bold mb-4">
+              Login as a Store Supervisor
+            </h2>
+            <div className="flex flex-col items-center">
+              <input
+                type="text"
+                placeholder="Enter your Employee ID"
+                className="border border-blue-300 rounded-lg p-2 mb-2 w-full"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="border border-blue-300 rounded-lg p-2 mb-4 w-full"
+              />
+              <button className="border border-blue-500 bg-blue-100 text-blue-500 hover:bg-blue-500 hover:text-white font-bold rounded-lg py-2 px-10 mb-2 w-50">
+                Login
+              </button>
+              <a href="#" className="text-blue-500 font-bold text-sm">
+                Need help?
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-    </div>
+    </>
   );
 };
 
-export default MensWear;
+export default CircleImage;

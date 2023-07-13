@@ -13,7 +13,7 @@ const MensWear = () => {
       <div className="flex flex-1 flex-col">
         <Header />
         {/* Right Side */}
-        <div className="flex p-10">
+        <div className="flex p-10 text-xl">
           <div className="flex-1"></div> 
           aughhh
           Sort by 
