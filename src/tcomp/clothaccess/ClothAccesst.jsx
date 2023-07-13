@@ -1,52 +1,28 @@
-// ClothAccess.jsx
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import DashBoardNav from '../dashbaordNav/DashBoardNav';
-import './ClothAccess.css';
-import './Cards.css';
 import backbtn from '../../assets/icons/back button.svg';
 import filter from '../../assets/icons/filter icon.svg';
 import downChevron from '../../assets/icons/scroll arrow.svg';
 import Cards from './Cards';
 import Sidebar from '../../components/Sidebar';
+import Header from '../../components/header';
 
 const ClothAccess = () => {
-  const [showNav, setShowNav] = useState(true);
-
-  useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
-
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const scrolledUp = prevScrollPos > currentScrollPos;
-
-      setShowNav(scrolledUp);
-      prevScrollPos = currentScrollPos;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
-      <DashBoardNav />
-      <div className="parent">
+      <Header />
+      <div className="relative flex">
         <Sidebar />
-        <div className={`cloth-access-container ${showNav ? '' : 'hide-nav'}`}>
-          <div className="cloth-access-content">
-            <div className="cloth-access-left-header">
-              <img src={backbtn} alt="" />
-              <p className="p">Clothing & Accessories</p>
+        <div className="w-4/5 bg-blue-100 rounded-lg p-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4">
+              <img src={backbtn} alt="" className="h-8" />
+              <p className="text-gray-700 font-semibold">Clothing & Accessories</p>
             </div>
-            <div className="cloth-access-right-content">
-              <div className="cloth-access-right-content-first-part">
-                <img src={filter} alt="" />
-                <p className="p">Sort by</p>
-              </div>
-              <div className="cloth-access-right-content-sec-part">
-                <p className="p">Non-compliance Score</p>
-                <img src={downChevron} alt="" />
-              </div>
+            <div className="flex items-center gap-4 mr-[5rem]">
+              <img src={filter} alt="" className="h-5" />
+              <p className="text-gray-700">Sort by</p>
+              <p className="text-blue-700 underline"> Non-compliance</p>
             </div>
           </div>
           <Cards />
