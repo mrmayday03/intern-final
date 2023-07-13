@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-
+import './prodlist.css';
+export default function ProductList() {
 function Brand({name,st}) {
+  // eslint-disable-next-line no-unused-vars
   const handleClick = event => {
     // toggle isActive state on click
     setIsActive(current => !current);
@@ -40,12 +43,13 @@ function Item({l,Products,Values}){
   );
 }
 
-export default function ProductList() {
+
   const products= ["Levi's","Wrangler","Pepe","M&S","Lee","ABC"]
   const values= [97,97,100,100,100,100]
   
   const numbers = [0,1,2,3,4,5];
   const updatedList = numbers.map((number)=>{
+   // eslint-disable-next-line react/jsx-key
    return <Item l={number} Products={products} Values={values}/>
   });
   return(

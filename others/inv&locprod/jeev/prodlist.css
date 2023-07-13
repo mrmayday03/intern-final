@@ -1,0 +1,80 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --primary: #3251cd;
+  --prim2: hsl(229, 100%, 94%);
+  --secondary: #ffffff;
+  --highlight: #ff6565;
+  --high2: #ffeeee;
+}
+
+.container {
+  @apply mx-auto bg-white text-center max-w-max max-h-500 p-5 rounded-lg text-gray-600;
+}
+
+.desc {
+  @apply relative overflow-visible;
+}
+
+.Item {
+  @apply mx-10 block w-180 text-primary border border-primary;
+}
+
+.Percent {
+  @apply w-12 mx-5;
+}
+
+.Brand {
+  @apply px-6 w-24 mx-5;
+}
+
+.danger {
+  @apply border-highlight text-highlight bg-high2;
+}
+
+.chosen {
+  @apply bg-primary text-secondary;
+}
+
+body {
+  @apply font-sans bg-blue-100 m-10 p-0;
+}
+
+ul {
+  @apply py-0 overflow-y-scroll overflow-x-hidden h-96;
+}
+
+button {
+  @apply py-4 h-10 bg-prim2 border border-gray-400 rounded-full text-gray-800 min-w-min;
+}
+
+::-webkit-scrollbar {
+  @apply bg-transparent;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  @apply bg-white block border-solid h-13 w-1;
+}
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  @apply border-0 border-b-8 border-l-8 border-r-8 rounded-tl-lg;
+  @apply border-primary;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  @apply border-prim2;
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  @apply border-8 border-t-0 border-l-8 border-r-8 rounded-bl-lg;
+  @apply border-primary;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  @apply border-prim2;
+}

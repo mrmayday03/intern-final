@@ -11,22 +11,21 @@ const LocateProducts = () => {
   return (
     <div className="bg-white w-90 h-full p-10 shadow-md rounded-3xl mt-10">
       <div className="mb-0">
-        <div className="text-lg font-bold text-slate-500">Locate Products</div>
-        <div className="text-slate-600 text-xs font-normal">
+        <div className="text-xl font-bold text-slate-500 pb-5">Locate Products</div>
+        <div className="text-slate-600 text-xs font-semibold pb-5">
           Products Misplaced
         </div>
       </div>
-      <div>
-        <table className="table-auto mt-1 w-80 rounded border-separate border-spacing-y-[2px]">
+        <table className="table-auto mt-1 w- rounded border-separate border-spacing-y-[2px]">
           <thead className="text-normal">
             <tr className="bg-blue-100 text-slate-400 text-sm">
-              <th className="py-2 px-4 rounded-l">QTY</th>
-              <th className="py-2 px-4 rounded-r">Location</th>
+              <th className="py-2 px-4 rounded-l text-left">QTY</th>
+              <th className="py-2 px-4 rounded-r text-left">Location</th>
             </tr>
           </thead>
           <tbody className="">
             {locatedProducts.map((product) => (
-              <tr key={product.id} className="bg-blue-100 text-blue-800">
+              <tr key={product.id} className="bg-blue-100 font-bold text-blue-800">
                 <td className="py-2 px-4 rounded-l text-sm">
                   {product.quantity}
                 </td>
@@ -37,7 +36,6 @@ const LocateProducts = () => {
             ))}
           </tbody>
         </table>
-      </div>
       <div className="flex flex-col gap-2 mt-3">
         <div className="text-slate-600 text-xs font-light">
           Recommended Action
