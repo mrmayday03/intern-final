@@ -11,7 +11,7 @@ const ClothAccess = () => {
   return (
     <>
       <Header />
-      <div className="relative flex">
+      <div className=" fixed flex">
         <Sidebar />
         <div className="w-4/5 bg-blue-100 rounded-xl p-4">
           <div className="flex justify-between items-center">
