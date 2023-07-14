@@ -46,12 +46,12 @@ const Cards = () => {
     <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[12vh] h-[50vh]">
     {categoryData.map((category, index) => (
       <div
-        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[50vh] mx-[1rem] w-80"
+        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh] mx-[1rem] w-80"
         key={index}
         onClick={handleCategoryClick}
         role="button"
       >
-        <p className="text-blue-800 font-semibold mb-1">{category.category}</p>
+        <p className="text-blue-800 font-semibold mb-4">{category.category}</p>
         {category.cards.map((card, cardIndex) => (
           <div
             className={`${
@@ -60,7 +60,7 @@ const Cards = () => {
               cardIndex === 0 ? 'red' : 'blue'
             }-200 flex justify-around m-2 h-10 items-center text-${
               cardIndex === 0 ? 'red' : 'blue'
-            }-500 px-7`}
+            }-500 px-4 py-10`}
             key={cardIndex}
           >
             <p>{card.name}</p>
