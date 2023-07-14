@@ -99,7 +99,7 @@ const NonCompliantProducts = () => {
   return (
     <div className="mb-10">
       <div className="flex justify-between items-center mb-10">
-        <div className="text-lg font-semibold">Non-Compliant Products
+        <div className="text-lg font-semibold">Non-Compliant Products on shelf
         <div className="text-lg pt-5 font-thin">Shelf no.: 04B</div>
         </div>
         <button

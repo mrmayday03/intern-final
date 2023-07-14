@@ -8,20 +8,19 @@ import Header from "../components/header";
 
 const MensWear = () => {
   return (
-    <div className="flex h-screen overflow-hidden">
-      <Sidebar />
-      <div className="flex flex-1 flex-col">
+    <div className="flex flex-col h-screen">
+      <div className="flex-shrink-0">
+        <Sidebar />
+      </div>
+      <div className="flex flex-col flex-1">
         <Header />
         {/* Right Side */}
-        <div className="flex p-10 text-xl">
-          <div className="flex-1 font-bold"></div> 
-          <div className="font-semibold">
-          Sort by &nbsp;
-          </div>
-          <div className="underline-offset-auto">Non-Compliance Score</div> 
+        <div className="flex p-5 text-xl items-center">
+          <div className="flex-1 font-bold">Sort by:</div>
+          <div className="font-semibold">Non-Compliance Score</div>
         </div>
         <div className="flex flex-1 p-4">
-          <div className="pr-2 pl-10 flex flex-col">
+          <div className="pr-2 pl-10 flex flex-col flex-1">
             <div className="bg-white rounded-3xl shadow-lg p-4 flex-1">
               <h2 className="text-lg font-semibold text-center pt-10 mb-4">List of Products</h2>
               <ProductList />
