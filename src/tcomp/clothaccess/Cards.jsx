@@ -43,10 +43,10 @@ const Cards = () => {
     navigate('/cloth-accessories');
   };
   return (
-    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[22vh] h-[50vh]">
+    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[12vh] h-[50vh]">
     {categoryData.map((category, index) => (
       <div
-        className="bg-white rounded-lg p-4 flex flex-col justify-around h-[40vh] mx-[1rem] w-80"
+        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[50vh] mx-[1rem] w-80"
         key={index}
         onClick={handleCategoryClick}
         role="button"

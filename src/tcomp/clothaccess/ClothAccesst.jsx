@@ -13,7 +13,7 @@ const ClothAccess = () => {
       <Header />
       <div className="relative flex">
         <Sidebar />
-        <div className="w-4/5 bg-blue-100 rounded-lg p-4">
+        <div className="w-4/5 bg-blue-100 rounded-xl p-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               <img src={backbtn} alt="" className="h-8" />
