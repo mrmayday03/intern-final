@@ -40,7 +40,7 @@ const Cards = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = () => {
-    navigate('/cloth-accessories');
+    navigate('/clothing/menswear');
   };
   return (
     <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[12vh] h-[50vh]">
@@ -48,7 +48,6 @@ const Cards = () => {
       <div
         className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[50vh] mx-[1rem] w-80"
         key={index}
-        onClick={handleCategoryClick}
         role="button"
       >
         <p className="text-blue-800 font-semibold mb-1">{category.category}</p>
@@ -62,13 +61,15 @@ const Cards = () => {
               cardIndex === 0 ? 'red' : 'blue'
             }-500 px-7`}
             key={cardIndex}
+            onClick={handleCategoryClick}
+
           >
             <p>{card.name}</p>
             {card.caution && <img className="h-4" src={caution} alt="Caution" />}
             <p>{card.percent}</p>
           </div>
         ))}
-        <img className="h-1" src={downChevron} alt="" />
+        {/* <img className="h-1" src={downChevron} alt="" /> */}
       </div>
     ))}
   </div>
