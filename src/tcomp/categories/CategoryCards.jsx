@@ -63,40 +63,41 @@ const CategoryCards = () => {
         <Sidebar />
         <div className="flex flex-1 flex-col">
           <Header />
+          <div className="h-screen flex flex-row ">
+              <div className=" fixed top-[20vh] left-[65vh] bg-white w-[50rem] h-[65vh] rounded-2xl p-4">
+                <p className="ml-[2rem] text-2xl text-gray-500 font-bold mb-4">Categories</p>
+                <div className="grid grid-cols-2 grid-rows-3 gap-4">
+                  {categories.map((category, index) => (
+                    <div
+                      className={`card-type ${category.color}  rounded-2xl  mx-8 my-2`}
+                      key={index}
+                      onClick={handleCardClick}
+                      role="button"
+                    >
+                      <div className="content flex items-center justify-between">
+                        <div className="left-side flex items-center w-[6rem] h-[8.5rem]">
+                          <div
+                            className={`${category.color} bg-transparent rounded-full w-12 h-12 flex items-center justify-center mr-4 ml-10`}
+                          >
+                            <div className="flex flex-col  items-center">
+                              <img src={category.icon} alt={category.name} className="w-10 h-10 bg-transparent" />
+                              <div className="card-title w-[6rem] mt-[1rem] ml-[2rem] text-white">{category.name}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="percent text-white  mr-[2rem] text-2xl">{category.percent}</div>
+                      </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <CompScan />
+            <Scan />
+              </div>
         </div>
       </div>
 
-      <div className="h-screen flex flex-row">
-        <div className="fixed top-[20vh] left-[65vh] bg-white w-[50rem] h-[60vh] rounded-2xl p-4">
-          <p className="ml-[2rem] text-2xl text-gray-500 font-bold mb-4">Categories</p>
-          <div className="grid grid-cols-2 grid-rows-3 gap-4">
-            {categories.map((category, index) => (
-              <div
-                className={`card-type ${category.color} rounded-lg mx-8 my-2`}
-                key={index}
-                onClick={handleCardClick}
-                role="button"
-              >
-                <div className="content flex items-center justify-between">
-                  <div className="left-side flex items-center w-[5rem] h-[8rem]">
-                    <div
-                      className={`${category.color} bg-transparent rounded-full w-12 h-12 flex items-center justify-center mr-4 ml-10`}
-                    >
-                      <div className="flex flex-col  items-center">
-                        <img src={category.icon} alt={category.name} className="w-10 h-10 bg-transparent" />
-                        <div className="card-title w-[6rem] mt-[1rem] ml-[2rem] text-white">{category.name}</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="percent text-white  mr-[2rem] text-2xl">{category.percent}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <CompScan />
-        <Scan />
-      </div>
+      
     </>
   );
 };

@@ -5,7 +5,7 @@ import refresh from '../../assets/icons/refresh.svg';
 
 const Scan = () => {
   return (
-    <div className="scan bg-white rounded-xl p-4 fixed h-[35vh] top-[50vh] w-[40vh] right-[8vw] mr-10vh">
+    <div className="scan bg-white rounded-2xl p-4 fixed h-[30vh] top-[42vh] w-[40vh] right-[15vw] mr-10vh">
       <p className="scan-title  text-gray-500 font-bold text-2xl ">Scan report</p>
       <p className="last-scan text-gray-500 -mt-4 text-xl">Last Scan:</p>
       <div className="time-stamp ">
