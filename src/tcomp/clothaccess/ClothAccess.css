@@ -1,10 +1,9 @@
-.parent {
+/* .parent {
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
 
-<<<<<<< HEAD
 .sidebar {
   width: 20%;
 }
@@ -16,7 +15,6 @@
   z-index: -10;
   position: relative;
 }
-=======
   .parent {
     display: flex;
     justify-content: flex-end;
@@ -52,7 +50,7 @@
   .cloth-access-left-header, .cloth-access-right-content {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust the spacing between the elements */
+    gap: 10px; Adjust the spacing between the elements 
     margin-right: 30px; 
     color: #566D86;
 
@@ -61,7 +59,6 @@
   .cloth-access-left-header img{
     margin-left:1rem ;
   }
->>>>>>> a61837a3c50e5aea4eeb8495655f08d9bce7dfb0
 
 .cloth-access-content {
   display: flex;
@@ -75,7 +72,7 @@
 .cloth-access-right-content {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust the spacing between the elements */
+  gap: 10px; 
   margin-right: 30px;
   color: #566d86;
 }
@@ -190,4 +187,4 @@
     top: 2rem;
     margin-right: 1rem;
   }
-}
+} */
