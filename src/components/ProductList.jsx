@@ -11,7 +11,7 @@ function Brand({ name, st }) {
 
   return (
     <button
-      className={`Brand ${isActive ? "chosen" : ""} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4 m-2 w-40`}
+      className={`Brand ${isActive ? "chosen" : ""} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4 m-2 w-40 lg:p-2 lg:m-1 lg:w-30  lg:text-sm`}
       id={name}
       onClick={handleClick}
     >
@@ -23,7 +23,7 @@ function Brand({ name, st }) {
 function Percent({ val, st }) {
   return (
     <button
-      className={`Percent ${st ? "" : "danger"} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4`}
+      className={`Percent ${st ? "" : "danger"} rounded-2xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white p-4 lg:p-2 lg:text-sm`}
     >
       {val}%
     </button>

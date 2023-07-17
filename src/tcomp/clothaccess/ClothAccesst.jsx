@@ -3,7 +3,7 @@ import backbtn from "../../assets/icons/back button.svg";
 import filter from "../../assets/icons/filter icon.svg";
 import Cards from "./Cards";
 import Sidebar from "../../components/Sidebar";
-import Header from "../../components/header";
+import Header from "../../components/Header";
 
 const ClothAccess = () => {
   return (
