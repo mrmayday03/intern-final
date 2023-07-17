@@ -1,6 +1,5 @@
 import React from 'react';
 import caution from '../../assets/icons/warning_.svg';
-import downChevron from '../../assets/icons/scroll arrow.svg';
 import { useNavigate } from 'react-router-dom';
 
 const categoryData = [
@@ -43,7 +42,7 @@ const Cards = () => {
     navigate('/clothing/menswear');
   };
   return (
-    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[12vh] h-[50vh]">
+    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh]">
     {categoryData.map((category, index) => (
       <div
         className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh] mx-[1rem] w-80"
@@ -54,11 +53,11 @@ const Cards = () => {
         {category.cards.map((card, cardIndex) => (
           <div
             className={`${
-              cardIndex === 0 ? 'border-red-500' : 'border-blue-500'
+              cardIndex === 0 ? 'border-red-500  bg-red-100' : 'border-blue-500'
             } border-2 border-solid rounded-2xl bg-${
               cardIndex === 0 ? 'red' : 'blue'
             }-200 flex justify-around m-2 h-10 items-center text-${
-              cardIndex === 0 ? 'red' : 'blue'
+              cardIndex === 0 ? 'red ' : 'blue'
             }-500 px-4 py-10`}
             key={cardIndex}
             onClick={handleCategoryClick}

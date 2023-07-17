@@ -1,7 +1,6 @@
 .register-nav{
     background-color: #fff;
     height: 5rem;
-    margin-top: -40px;
     
     border-radius: 1rem;
   
@@ -9,6 +8,7 @@
     position: fixed;
     left: 0;
     right: 0;
+    
   
 
 }
@@ -17,5 +17,5 @@
 }
 p{
     padding: 1rem;
-    margin-top:20px ;
+    margin-top:8rem ;
 }

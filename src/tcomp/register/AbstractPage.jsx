@@ -15,7 +15,7 @@ const AbstractPage = () => {
     <>  
         <RegisterNav/>
 
-    <div className='body'>
+    <div className='body scrollbar-hide'>
       <div className="container">
         <div className="img-container">
           <img src={icon} alt="" className='img' />

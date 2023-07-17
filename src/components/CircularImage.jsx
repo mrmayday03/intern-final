@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./header";
+import RegisterNav from '../tcomp/register/RegisterNav'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -11,7 +11,7 @@ const CircleImage = () => {
   };
   return (
     <>
-      <Header />
+      <RegisterNav />
       <div className="flex flex-col items-center justify-center h-screen bg-color-lightblue">
         <div className="flex flex-col items-center">
           <div className=" circle flex justify-center items-center bg-white rounded-full w-40 h-40 shadow-lg mb-6">
