@@ -97,8 +97,8 @@ const NonCompliantProducts = () => {
   const columnsToShow = 5;
 
   return (
-    <div className="mb-10 lg:h-[10=5rem]">
-      <div className="flex justify-between items-center mb-10 lg:mb-5">
+    <div className="mb-10  ">
+      <div className="flex justify-between items-center xl:mb-10 lg:mb-5 ">
         <div className="text-lg font-semibold">Non-Compliant Products on shelf
         <div className="text-lg pt-5 font-thin">Shelf no.: 04B</div>
         </div>
@@ -114,7 +114,7 @@ const NonCompliantProducts = () => {
           )}
         </button>
       </div>
-      <div className="grid grid-cols-6 grid-rows-4 gap-4 lg:gap-2">
+      <div className="grid grid-cols-6 grid-rows-4 xl:gap-4 lg:gap-2">
         <div className="text-left font-semibold ">Model No.</div>
         {Array.from({ length: columnsToShow }, (_, index) => (
           <div key={index + 1} className="text-center font-semibold ">
@@ -129,8 +129,8 @@ const NonCompliantProducts = () => {
                 key={index + 1}
                 className={`rounded-xl px-3 py-2 ${
                   shelves[index]?.productsCount < 4
-                    ? "bg-red-100 border-2 lg:border-1   hover:bg-red-500 hover:text-white border-red-500 text-red-500 font-bold"
-                    : "bg-green-100 border-2 hover:bg-green-500 lg:border-1 hover:text-white border-green-500 text-green-500 font-bold"
+                    ? "bg-red-100 xl:border-2 lg:border-1   hover:bg-red-500 hover:text-white border-red-500 text-red-500 font-bold"
+                    : "bg-green-100 border-2 hover:bg-green-500 lg:border-1 xl:border-2 hover:text-white border-green-500 text-green-500 font-bold"
                 }`}
               >
                 {shelves[index]?.productsCount}/4
