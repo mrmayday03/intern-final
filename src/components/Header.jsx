@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-white py-8 px-10 h-[13vh] rounded-br-xl">
+    <header className="bg-white py-8 px-10 h-[13vh] rounded-br-xl ">
       <div className="mx-auto flex justify-between items-center">
         <div className="flex items-center ml-[33vw] lg:ml-[5vw]">
           <p className="text-lg text-gray-600 w-auto mx-4 font-semibold ">Last Scan 07.11.2027</p>
