@@ -8,12 +8,19 @@ const LocateProducts = () => {
     {
       id: 1,
       quantity: "01",
+      name: "John Doe",
+      role: "Store Supervisor",
+      tickets: "02",
       location: "In trial room# 04",
     },
     {
       id: 2,
       quantity: "02",
+      name: "Jane Doe",
+      role: "Store Supervisor",
+      tickets: "03",
       location: "In trial room# 04",
+
     },
   ];
 

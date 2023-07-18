@@ -45,7 +45,7 @@ const Sidebar = () => {
           role="button"
         >
           <img src={`/${item.image}`} alt={item.title} className={`w-6 h-6 mr-2 lg:mr-2  ${
-            activeIndex === index ? "filter brightness-0" : ""
+            activeIndex === index ? "filter sepia-100 hue-rotate-190 saturate-500" : ""
           }`} />
           <span
             className={`${
