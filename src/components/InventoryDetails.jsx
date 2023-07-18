@@ -1,18 +1,30 @@
+import React, { useState } from 'react';
+import NotifyManagerModal from './NotifyManagerModal';
+
 const InventoryDetails = () => {
   const quantities = [
     {
       id: 1,
-      quantity: "12",
+      quantity: '12',
     },
   ];
+
+  const [showNotifyManagerModal, setShowNotifyManagerModal] = useState(false);
+  const [showTableModal, setShowTableModal] = useState(false);
+
+  const openNotifyManagerModal = () => {
+    setShowNotifyManagerModal(true);
+  };
+
+  const closeNotifyManagerModal = () => {
+    setShowNotifyManagerModal(false);
+  };
 
   return (
     <div className="bg-white w-90 h-80 p-3 px-6 pb-14 shadow-md pr-8 rounded-3xl mt-10 ml-10">
       <div className="mb-2">
         <div className="text-lg font-bold text-slate-600 mb-1">Inventory Details</div>
-        <div className="text-slate-600 text-xs font-normal">
-          Product Inventory
-        </div>
+        <div className="text-slate-600 text-xs font-normal">Product Inventory</div>
       </div>
       <div>
         <table className="table-auto mt-1 rounded border-separate border-spacing-[2px]">
@@ -31,13 +43,22 @@ const InventoryDetails = () => {
         </table>
       </div>
       <div className="flex flex-col gap-2 mt-3">
-        <div className="text-slate-600 text-xs font-light">
-          Recommended Action
-        </div>
-        <button className="bg-blue-100 border-2 border-blue-600 text-blue-800 rounded-lg w-40 h-10">
+        <div className="text-slate-600 text-xs font-light">Recommended Action</div>
+        <button
+          className="bg-blue-100 border-2 border-blue-600 text-blue-800 rounded-lg w-40 h-10"
+          onClick={openNotifyManagerModal}
+        >
           Notify manager
         </button>
       </div>
+
+      {showNotifyManagerModal && (
+        <NotifyManagerModal isOpen={true} closeModal={closeNotifyManagerModal} />
+      )}
+
+      {showTableModal && (
+        <Modal isOpen={true} closeModal={() => setShowTableModal(false)} selectedRow={[]} />
+      )}
     </div>
   );
 };

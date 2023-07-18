@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "./Modal";
 
 const LocateProducts = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -7,6 +8,11 @@ const LocateProducts = () => {
     {
       id: 1,
       quantity: "01",
+      location: "In trial room# 04",
+    },
+    {
+      id: 2,
+      quantity: "02",
       location: "In trial room# 04",
     },
   ];
@@ -36,7 +42,10 @@ const LocateProducts = () => {
         </thead>
         <tbody className="">
           {locatedProducts.map((product) => (
-            <tr key={product.id} className="bg-blue-100 font-bold text-blue-800">
+            <tr
+              key={product.id}
+              className="bg-blue-100 font-bold text-blue-800"
+            >
               <td className="py-2 px-4 rounded-l text-sm">
                 {product.quantity}
               </td>
@@ -60,25 +69,11 @@ const LocateProducts = () => {
       </div>
 
       {modalOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          {/* Modal Content */}
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center w-[40vw] h-[40vh]  ">
-            <div className="flex items-center justify-center rounded-full w-[10rem] h-[10rem] mb-4 ">
-              <img src="/right icon.png" alt="" />
-            </div>
-            <p className="text-center  font-medium w-[30rem] text-4xl text-blue-600 mb-4">
-              Inventory notification sent to store Manager
-            </p>
-            <button
-              data-modal-hide="popup-modal"
-              type="button"
-              className="text-blue-500 bg-white w-[10rem] h-[5rem] text-2xl hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200  font-medium px-5 py-2.5 hover:text-blue-900 focus:z-10"
-              onClick={closeModal}
-            >
-              Close
-            </button>
-          </div>
-        </div>
+        <Modal
+          isOpen={modalOpen}
+          closeModal={closeModal}
+          selectedRow={locatedProducts}
+        />
       )}
     </div>
   );
