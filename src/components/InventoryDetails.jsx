@@ -22,7 +22,7 @@ const InventoryDetails = () => {
   };
 
   return (
-    <div className="bg-white w-90 h-80 p-3 px-6 pb-14 shadow-md pr-8 rounded-3xl mt-10 ml-10">
+    <div className="bg-white w-90 h-80 lg:h-[15rem]  lg:w-[18rem] p-3 px-6 pb-14 shadow-md pr-8 rounded-3xl mt-10 ml-10 lg:mr-[10vw] lg:mt-5">
       <div className="mb-2">
         <div className="text-lg font-bold text-slate-600 mb-1">Inventory Details</div>
         <div className="text-slate-600 text-xs font-normal">Product Inventory</div>
