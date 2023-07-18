@@ -5,7 +5,7 @@ import health from "../../assets/icons/Health and beauty.svg";
 import Home from "../../assets/icons/Home goods.svg";
 import toy from "../../assets/icons/Toys.svg";
 import elct from "../../assets/icons/electronic.svg";
-import Header from "../../components/header";
+import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import CompScan from "./CompScan";
 import Scan from "./Scan";
