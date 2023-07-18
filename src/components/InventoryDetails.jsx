@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState } from 'react';
 import NotifyManagerModal from './NotifyManagerModal';
 
