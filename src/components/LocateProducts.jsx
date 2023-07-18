@@ -26,14 +26,14 @@ const LocateProducts = () => {
   };
 
   return (
-    <div className="bg-white w-90 lg:w-[18rem]  lg:bottom-[3rem] lg:h-[19rem]  h-full pl-10 shadow-md rounded-3xl mt-10  xl:w-[30rem]  xl:bottom-[3rem] xl:h-[24rem] xl:mt-5 lg:mt-8 xl:ml-[5rem] ">
-      <div className="mb-0 lg:my-4 lg:pt-2">
+    <div className="bg-white w-90 lg:w-[18rem]  lg:bottom-[3rem] lg:h-[17rem]  h-full pl-10 shadow-md rounded-3xl mt-10  xl:w-[30rem]  xl:bottom-[3rem] xl:h-[24rem] xl:mt-5 lg:mt-8 xl:ml-[5rem] ">
+      <div className="mb-0 lg:my-2 lg:pt-2">
         <div className="text-l font-bold text-slate-500 xl:text-xl lg:text-lg xl:my-5 ">Locate Products</div>
         <div className="text-slate-600 xl:text-xl lg:text-lg font-semibold">
           Products Misplaced
         </div>
       </div>
-      <table className="table-auto mt-1 w- rounded border-separate border-spacing-y-[2px]">
+      <table className="table-auto mt-1 w- rounded border-separate ">
         <thead className="text-normal ">
           <tr className="bg-blue-100 text-slate-400 lg:text-sm xl:text-lg">
             <th className="py-2 px-4 rounded-l text-left">QTY</th>
@@ -61,7 +61,7 @@ const LocateProducts = () => {
           Recommended Action
         </div>
         <button
-          className="bg-blue-100 px-2 border-2 border-blue-600 text-blue-800 rounded-lg xl:w-28 xl:h-12  lg:mr-7  lg:p-2  lg:h-10 lg:w-auto lg:py-1 lg:mb-2"
+          className="bg-blue-100 px-2 border-2 border-blue-600 text-blue-800 rounded-lg xl:w-28 xl:h-12  lg:mr-7  lg:p-2   lg:w-auto lg:py-1 lg:mb-2"
           onClick={openModal}
         >
           Assign

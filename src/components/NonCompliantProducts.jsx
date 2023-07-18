@@ -97,7 +97,7 @@ const NonCompliantProducts = () => {
   const columnsToShow = 5;
 
   return (
-    <div className="mb-10  ">
+    <div className="mb-10 lg:h-[15rem] ">
       <div className="flex justify-between items-center xl:mb-10 lg:mb-5 ">
         <div className="text-lg font-semibold">Non-Compliant Products on shelf
         <div className="text-lg pt-5 font-thin">Shelf no.: 04B</div>
@@ -115,7 +115,7 @@ const NonCompliantProducts = () => {
         </button>
       </div>
       <div className="grid grid-cols-6 grid-rows-4 xl:gap-4 lg:gap-2">
-        <div className="text-left font-semibold ">Model No.</div>
+        <div className="text-left font-semibold lg:mb-1">Model No.</div>
         {Array.from({ length: columnsToShow }, (_, index) => (
           <div key={index + 1} className="text-center font-semibold ">
             50{index + 1}

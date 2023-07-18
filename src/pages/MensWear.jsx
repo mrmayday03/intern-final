@@ -29,7 +29,7 @@ const MensWear = () => {
           </div>
 
           <div className="flex-1 pl-4 flex flex-col ">
-            <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 lg:h-[12rem] lg:w-[40rem] xl:[20rem] xl:w-[50vw] xl:ml-[5rem] ">
+            <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 lg:h-[13rem] lg:w-[40rem] xl:[20rem] xl:w-[50vw] xl:ml-[5rem] ">
               <NonCompliantProducts />
             </div>
 
