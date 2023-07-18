@@ -20,8 +20,8 @@ const LocateProducts = () => {
   };
 
   return (
-    <div className="bg-white w-90 lg:w-[18rem] lg:bottom-[3rem] lg:h-[10rem] lg:mt-5 h-full pl-10 shadow-md rounded-3xl mt-10">
-      <div className="mb-0">
+    <div className="bg-white w-90 lg:w-[18rem] lg:bottom-[3rem] lg:h-[15rem] lg:mt-5 h-full pl-10 shadow-md rounded-3xl mt-10">
+      <div className="mb-0 lg:my-4 lg:pt-2">
         <div className="text-l font-bold text-slate-500">Locate Products</div>
         <div className="text-slate-600 text-xs font-semibold">
           Products Misplaced
