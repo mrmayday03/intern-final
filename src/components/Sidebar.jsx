@@ -31,20 +31,20 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-1/5 bg-blue-700 p-10 lg:p-8 rounded-r-3xl flex flex-col">
+    <div className="w-1/5 bg-blue-700 xl:p-10 lg:p-8 rounded-r-3xl flex flex-col">
       <div className="mt-3 mb-10 flex items-center">
         <p className="font-bold text-white text-center w-full mb-8 text-lg">LOGO HERE</p>
       </div>
       {sidebarItems.map((item, index) => (
         <div
           key={index}
-          className={`flex items-left py-10 lg:py-5 w-auto ${
+          className={`flex items-left xl:py-10 lg:py-5 w-auto ${
             activeIndex === index ? "bg-white w-8 text-blue-700" : ""
           } rounded-2xl p-10`}
           onClick={() => handleItemClick(index)}
           role="button"
         >
-          <img src={`/${item.image}`} alt={item.title} className={`w-6 h-6 mr-2 lg:mr-2  ${
+          <img src={`/${item.image}`} alt={item.title} className={`xl:w-6 xl:h-6 xl:mr-2 lg:mr-2  ${
             activeIndex === index ? "filter sepia-100 hue-rotate-190 saturate-500" : ""
           }`} />
           <span
