@@ -42,23 +42,23 @@ const Cards = () => {
     navigate('/clothing/menswear');
   };
   return (
-    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh]">
+    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh]  ">
     {categoryData.map((category, index) => (
       <div
-        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh] mx-[1rem] w-80"
+        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh]  mx-[1rem] w-80"
         key={index}
         role="button"
       >
-        <p className="text-blue-800 font-semibold mb-4">{category.category}</p>
+        <p className="text-blue-800 font-semibold mb-4 lg:mb-1">{category.category}</p>
         {category.cards.map((card, cardIndex) => (
           <div
             className={`${
               cardIndex === 0 ? 'border-red-500  bg-red-100' : 'border-blue-500'
             } border-2 border-solid rounded-2xl bg-${
               cardIndex === 0 ? 'red' : 'blue'
-            }-200 flex justify-around m-2 h-10 items-center text-${
+            }-200 flex justify-around m-2 h-1 items-center text-${
               cardIndex === 0 ? 'red ' : 'blue'
-            }-500 px-4 py-10`}
+            }-500 px-4 py-10 lg:py-6`}
             key={cardIndex}
             onClick={handleCategoryClick}
 

@@ -10,9 +10,9 @@ const ClothAccess = () => {
     <>
       <div className="flex h-screen">
         <Sidebar />
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col ">
           <Header />
-          <div className="w-4/5 bg-blue-100   rounded-xl p-4">
+          <div className="w-4/5 lg:h-[92vh] lg:w-[100vw] bg-blue-100   rounded-xl p-4 lg:overflow-hidden">
             <div className="flex justify-between items-center ">
               <div className="flex items-center gap-4">
                 <img src={backbtn} alt="" className="h-8" />
@@ -25,9 +25,12 @@ const ClothAccess = () => {
                 <p className="text-gray-700">Sort by</p>
                 <p className="text-blue-700 underline"> Non-compliance</p>
               </div>
+
             </div>
+            <Cards/>
+
           </div>
-          <Cards />
+
         </div>
       </div>
     </>

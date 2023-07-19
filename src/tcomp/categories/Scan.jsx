@@ -5,7 +5,7 @@ import refresh from '../../assets/icons/refresh.svg';
 
 const Scan = () => {
   return (
-    <div className="scan bg-white rounded-2xl p-4 h-[30vh] top-[42vh] w-[40vh] right-[15vw] mr-10vh">
+    <div className="scan bg-white rounded-2xl p-4 h-[30vh] top-[42vh] w-[40vh] right-[15vw] mr-10vh lg:h-[43vh] lg:top-[35vh]  ">
       <p className="scan-title  text-gray-500 font-bold text-2xl ">Scan report</p>
       <p className="last-scan text-gray-500 -mt-4 text-xl">Last Scan:</p>
       <div className="time-stamp ">
@@ -21,10 +21,10 @@ const Scan = () => {
         </div>
         <div className="status flex items-center -mt-6 ml-2">
           <p className="ques text-gray-500 text-lg ">Scanner Status:</p>
-          <p className="ans text-green-700 font-bold text-lg m-2 ml-1">Inactive</p>
+          <p className="ans text-green-700 font-bold text-lg m-2 ml-1 lg:-ml-6">Inactive</p>
         </div>
-        <div className="ref-btn flex items-center bg-blue-200 w-[7rem]  mx-0 rounded-[0.4rem]   ">
-          <button className=" px-2 py-1 rounded-md text-blue-700 border-none text-sm font-semibold">Refresh</button>
+        <div className="ref-btn flex items-center bg-blue-200 w-[7rem]  mx-0 rounded-[0.4rem] lg:ml-5  ">
+          <button className=" px-2 py-1 rounded-md text-blue-700 border-none text-sm font-semibold  ">Refresh</button>
           <img src={refresh} alt="" className="h-4 ml-1" />
         </div>
       </div>
