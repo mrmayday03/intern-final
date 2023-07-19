@@ -13,9 +13,9 @@ const MensWear = () => {
       <div className="flex flex-1 flex-col">
         <Header/>
         {/* Right Side */}
-        <div className="flex p-5 text-xl xl:mr-[3rem] lg:mr-[8rem]">
+        <div className="flex p-5 text-xl xl:mr-[3rem] lg:mr-[16rem] lg:text-sm">
           <div className="flex-1 font-bold"></div> 
-          <div className="font-semibold ">
+          <div className="font-semibold  ">
           Sort by &nbsp;
           </div>
           <div className="underline-offset-auto">Non-Compliance Score</div> 
@@ -26,6 +26,10 @@ const MensWear = () => {
               <h2 className="lg:text-lg xl:text-xl text-gray-500  font-bold text-center pt-10 mb-4 lg:mb-2  lg:pt-2 xl:mb-7 xl:mt-7">List of Products</h2>
               <ProductList />
             </div>
+            {/* <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 lg:w-[20vw] lg:h-full lg:-ml-[2rem] xl:w-[24vw]">
+              <h2 className="lg:text-lg xl:text-xl text-gray-500  font-bold text-center pt-10 mb-4 lg:mb-2  lg:pt-2 xl:mb-7 xl:mt-7">List of Products</h2>
+              <ProductList />
+            </div> */}
           </div>
 
           <div className="flex-1 pl-4 flex flex-col ">

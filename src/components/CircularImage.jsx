@@ -32,6 +32,7 @@ const CircleImage = () => {
               <input
                 type="password"
                 placeholder="Password"
+                
                 className="border border-blue-300 rounded-lg p-2 mb-4 w-full"
               />
               
