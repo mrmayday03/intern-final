@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
 
 const NotifyManagerModal = ({ isOpen, closeModal }) => {
-  const [notificationText, setNotificationText] = useState('');
-  const [selectedRecipient, setSelectedRecipient] = useState('');
+  const [notificationText, setNotificationText] = useState("");
+  const [selectedRecipient, setSelectedRecipient] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChangeNotification = (event) => {
@@ -80,13 +81,16 @@ const NotifyManagerModal = ({ isOpen, closeModal }) => {
           onClick={closeSuccessModal}
         >
           <div className="bg-white rounded-lg p-6">
-            <p>Notification sent!</p>
-            <button
-              className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg mt-4"
+          <button
+              className="p-2 text-xl border border-blue-600 rounded-full mt-4"
               onClick={closeSuccessModal}
             >
-              Close
+              ✖
             </button>
+            <div className="flex items-center justify-center mb-4">
+              <img src='/right icon.png' className="h-20 w-20"></img>
+            </div>
+            <p className="text-blue-700 text-xl w-80 text-center">Inventory Notification sent to the Store Manager</p>
           </div>
         </div>
       )}
