@@ -11,7 +11,7 @@ function Brand({ name, st }) {
 
   return (
     <button
-      className={`Brand ${isActive ? "chosen" : ""} rounded-2xl bg-blue-100 xl:border-3  xl:ml-6 xl:w-15 xl:h-20  border-blue-500 hover:bg-blue-500 hover:text-white xl:p-4  xl:text-xl xl:mr-20 xl:w-auto lg:h-13 lg:p-2 lg:w-28 lg:rounded-lg lg:border-2 lg:-ml-9`}
+      className={`Brand ${isActive ? "chosen" : ""} rounded-2xl bg-blue-100 xl:border-3  xl:ml-6 xl:w-15 xl:h-20  border-blue-500 hover:bg-blue-500 hover:text-white xl:p-4  xl:text-xl xl:mr-20 xl:w-auto lg:h-13 lg:p-2 lg:w-28 lg:rounded-lg lg:border-2 lg:ml-9`}
       id={name}
       onClick={handleClick}
     >
