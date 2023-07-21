@@ -15,12 +15,12 @@ const MensWear = () => {
         <Header/>
         {/* Right Side */}
         <div className="flex p-5 text-xl xl:mr-[3rem] lg:mr-[16rem] lg:text-sm lg:p-2">
-          <div className="flex-1 font-bold"></div> 
-          <div className="font-semibold  ">
-          Sort by &nbsp;
+          <div className="flex flex-rows font-bold">
+          <div className="font-semibold xl:m-5">
+            Sort by &nbsp;
           </div>
           <div className="underline-offset-auto">Non-Compliance Score</div> 
-        </div>
+        </div></div> 
         <div className="flex flex-1 p-4">
           <div className="pr-2 pl-10 flex flex-col">
             <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 lg:w-[20vw] lg:h-full lg:-ml-[2rem] xl:w-[24vw] lg:mt- ">
@@ -31,12 +31,12 @@ const MensWear = () => {
           </div>
 
           <div className="flex-1 pl-4 flex flex-col ">
-            <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 lg:h-[13rem] lg:w-[40rem] xl:[20rem] xl:w-[50vw] xl:ml-[5rem] ">
+            <div className="bg-white rounded-3xl shadow-lg p-4 flex-1 xl:h-[12rem] lg:h-[13rem] lg:w-[40rem] xl:w-[50vw] xl:ml-[5rem] ">
               <NonCompliantProducts />
             </div>
 
             <div className="flex space-x-4 flex-1">
-              <div className="flex-1 lg:h">
+              <div className="flex lg:h">
                 <LocateProducts />
               </div>
               <div className="flex-1 ">

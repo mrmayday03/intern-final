@@ -33,7 +33,7 @@ const LocateProducts = () => {
   };
 
   return (
-    <div className="bg-white w-90 lg:w-[19rem]  lg:bottom-[3rem] lg:h-[18rem]  h-full pl-10 shadow-md rounded-3xl mt-10  xl:w-[30rem]  xl:bottom-[3rem] xl:h-[24rem] xl:mt-5 lg:mt-8 xl:ml-[5rem] ">
+    <div className="bg-white xl:w-90 lg:w-[19rem]  lg:bottom-[3rem] lg:h-[18rem]  h-full pl-10 shadow-md rounded-3xl mt-10  xl:w-[30rem]  xl:bottom-[3rem] xl:h-[24rem] xl:mt-5 lg:mt-8 xl:ml-[5rem] ">
       <div className="mb-0 lg:my-2 lg:pt-2">
         <div className="text-l font-bold text-slate-500 xl:text-xl lg:text-lg xl:my-5 ">Locate Products</div>
         <div className="text-slate-600 xl:text-xl lg:text-lg font-semibold">

@@ -11,7 +11,7 @@ function Brand({ name, st }) {
 
   return (
     <button
-      className={`Brand ${isActive ? "chosen" : ""} flex justify-center rounded-2xl bg-blue-100 xl:border-3  xl:ml-6 xl:w-15 xl:h-20  border-blue-500 hover:bg-blue-500 hover:text-white xl:p-4  xl:text-xl xl:mr-20 lg:h-13 lg:p-2 lg:w-28 lg:rounded-lg lg:border-2 lg:-ml-9`}
+      className={`Brand ${isActive ? "chosen" : ""} flex justify-center rounded-xl  bg-blue-100 xl:border-3  xl:ml-6 xl:w-15 xl:h-20  border-blue-500 hover:bg-blue-500 hover:text-white xl:p-4  xl:text-xl lg:h-13 lg:p-2 lg:w-28 lg:rounded-lg lg:border-2 lg:-ml-9`}
       id={name}
       onClick={handleClick}
     >
@@ -36,7 +36,7 @@ function Item({ l, Products, Values }) {
   const s = v < 100 ? false : true;
 
   return (
-    <div className="mx-10 flex justify-between items-center xl:h-20 xl:my-8 xl:w-15 xl:m-4 ">
+    <div className="mx-10 flex justify-center items-center xl:h-20 xl:my-8 xl:w-15 xl:m-4 ">
       <Brand name={n} st={s} />
       <Percent val={v} st={s} />
     </div>
