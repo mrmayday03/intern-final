@@ -45,7 +45,7 @@ const Cards = () => {
     <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh] lg:w-[70vw]  lg:h-[] ">
     {categoryData.map((category, index) => (
       <div
-        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh]  xl:mx-[1rem] w-80 lg:h-[65vh] lg:ml-10  lg:w-[20vw] "
+        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh]  xl:ml-[10vh] lg:h-[65vh] lg:ml-10 items-center lg:w-[20vw] "
         key={index}
         role="button"
       >
@@ -54,7 +54,7 @@ const Cards = () => {
           <div
             className={`${
               cardIndex === 0 ? 'border-red-500 text-red-600 bg-red-100' : 'border-blue-500'
-            } border-2 border-solid rounded-2xl bg-${
+            } xl:p-[3rem] border-2 border-solid rounded-2xl bg-${
               cardIndex === 0 ? 'red' : 'blue'
             }-200 flex justify-around m-2 lg:m-1 h-1 items-center text-${
               cardIndex === 0 ? 'red ' : 'blue'
@@ -63,7 +63,7 @@ const Cards = () => {
             onClick={handleCategoryClick}
 
           >
-            <p className='lg:text-sm xl:text-lg' >{card.name}</p>
+            <p className='lg:text-sm xl:text-lg text-center' >{card.name}</p>
             {card.caution && <img className="h-4" src={caution} alt="Caution" />}
             <p>{card.percent}</p>
           </div>
