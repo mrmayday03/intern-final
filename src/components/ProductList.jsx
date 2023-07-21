@@ -23,7 +23,7 @@ function Brand({ name, st }) {
 function Percent({ val, st }) {
   return (
     <button
-      className={`Percent ${st ? "" : "danger"} flex justify-center rounded-xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white xl:p-4  xl:text-xl  xl:border-3 xl:mr-20 xl:h-20 lg:rounded-lg lg:h-12 lg:my-3 lg:w-13 lg:ml-4 lg:p-1 `}
+      className={`Percent ${st ? "" : "danger"} flex justify-center rounded-xl bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white  lg:rounded-lg lg:h-12 lg:my-3 lg:w-13 lg:ml-4 lg:p-1 xl:h-18  `}
     >
       {val}%
     </button>
@@ -36,7 +36,11 @@ function Item({ l, Products, Values }) {
   const s = v < 100 ? false : true;
 
   return (
+<<<<<<< HEAD
     <div className="mx-10 flex justify-center items-center xl:h-20 xl:my-8 xl:w-15 xl:m-4 ">
+=======
+    <div className="mx-10 flex justify-between items-center xl:h-30  xl:my-8 xl:w-15 xl:m-4 ">
+>>>>>>> 879ae7df00fa2f0c52f2cd37391ba3653aa67aed
       <Brand name={n} st={s} />
       <Percent val={v} st={s} />
     </div>
