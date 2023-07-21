@@ -42,10 +42,10 @@ const Cards = () => {
     navigate('/clothing/menswear');
   };
   return (
-    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh] lg:w-[100vw]  lg:h-[] ">
+    <div className="bg-blue-100 rounded-lg p-4 relative flex justify-around top-[3vh] h-[50vh] lg:w-[70vw]  lg:h-[] ">
     {categoryData.map((category, index) => (
       <div
-        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh]  xl:mx-[1rem] w-80 lg:h-[65vh] lg:ml-10  lg:w-[25vw] "
+        className="bg-white rounded-2xl p-4 flex flex-col justify-around h-[65vh]  xl:mx-[1rem] w-80 lg:h-[65vh] lg:ml-10  lg:w-[20vw] "
         key={index}
         role="button"
       >
@@ -58,7 +58,7 @@ const Cards = () => {
               cardIndex === 0 ? 'red' : 'blue'
             }-200 flex justify-around m-2 lg:m-1 h-1 items-center text-${
               cardIndex === 0 ? 'red ' : 'blue'
-            }-500 px-4 py-10 lg:py-7 lg:px-2 lg:w-[15rem] `}
+            }-500 px-4 py-10 lg:py-7 lg:px-2 lg:w-[13rem] `}
             key={cardIndex}
             onClick={handleCategoryClick}
 
