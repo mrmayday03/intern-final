@@ -64,26 +64,26 @@ const CategoryCards = () => {
         <div className="flex flex-1 flex-col">
           <Header />
           <div className="h-screen flex flex-row lg:w-[100vw]" >
-            <div className="top-[20vh] left-[65vh] bg-white xl:w-[50vw] h-[75vh] lg:h-[75vh] lg:w-[30rem] m-10 rounded-2xl p-4">
-              <p className="ml-[2rem] text-2xl text-gray-500 font-bold mb-4">Categories</p>
-              <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="top-[20vh] left-[65vh] bg-white xl:w-[55vw] h-[75vh] lg:h-[75vh] lg:w-[30rem] m-10 rounded-2xl xl:p-4">
+              <p className="ml-[2rem] lg:text-2xl xl:text-3xl text-gray-500 font-bold mb-4">Categories</p>
+              <div className="grid grid-cols-2 gap-4 mb-10 xl:ml-[5rem] ">
                 {categories.map((category, index) => (
                   <div
-                    className={`card-type ${category.color} xl:w-[25rem] xl:h-[13rem] lg:h-[7rem] lg:w-[10rem] ml-8 rounded-2xl`}
+                    className={`card-type ${category.color} xl:w-[25rem] xl:h-[13rem] lg:h-[7rem] lg:w-[10rem] ml-8 xl:ml-8 rounded-2xl`}
                     key={index}
                     onClick={handleCardClick}
                     role="button"
                   >
                     <div className="content flex items-center justify-between p-4 ml-8">
                       <div className="left-side flex items-center">
-                        <div className={`${category.color} bg-transparent rounded-full w-12 h-12 flex flex-col m-10 items-center justify-center lg:w-6 lg:h-6 lg:-ml-[1rem] `}>
+                        <div className={`${category.color} bg-transparent rounded-full xl:w-20 xl:h-22 flex flex-col m-10 items-center justify-center lg:w-6 lg:h-6 lg:-ml-[1rem] xl:mt-[5rem] `}>
                           
-                          <img src={category.icon} alt={category.name} className="xl:w-[30rem] xl:h-30 bg-transparent lg:w-5 lg:h-5 lg:mb-3 lg:-mt-9 " />
-                          <div className="card-title text-white lg:w-25  lg:text-sm">{category.name}</div>
+                          <img src={category.icon} alt={category.name} className="xl:w-[30rem] xl:h-20 bg-transparent lg:w-5 lg:h-5 lg:mb-3 lg:-mt-9 " />
+                          <div className="card-title text-white lg:w-25  lg:text-sm xl:text-xl">{category.name}</div>
 
                         </div>
                       </div>
-                      <div className="percent text-white text-2xl lg:-mt-7 ">{category.percent}</div>
+                      <div className="percent text-white lg:text-2xl lg:-mt-7 xl:mr-[4rem] xl:text-4xl ">{category.percent}</div>
                     </div>
                   </div>
                 ))}
