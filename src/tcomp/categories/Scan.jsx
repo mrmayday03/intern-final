@@ -23,9 +23,9 @@ const Scan = () => {
           <p className="ques text-gray-500 xl:text-lg  lg:text-sm ">Scanner Status:</p>
           <p className="ans text-green-700 font-bold xl:text-lg m-2 ml-1 lg:-ml-6">Inactive</p>
         </div>
-        <div className="ref-btn flex items-center bg-blue-200 xl:w-[7rem]  xl:mx-auto xl:mt-3 xl:rounded-[0.4rem] lg:ml-5 border-blue-600 lg:-mt-4 ">
-          <button className=" px-2 py-1 rounded-md text-blue-700 xl:text-xl   text-sm font-semibold  ">Refresh</button>
-          <img src={refresh} alt="" className="h-4 ml-1 " />
+        <div className="ref-btn flex items-center bg-blue-200 xl:w-[7rem]  xl:mx-auto xl:mt-3 xl:rounded-[0.4rem] lg:ml-5 border-blue-600 lg:-mt-4 lg:w-[6rem] lg:rounded-md  ">
+          <button className=" px-2 py-1  text-blue-700 xl:text-xl   text-sm font-semibold  ">Refresh</button>
+          <img src={refresh} alt="" className="h-4 ml-1 xl:mr-3 " />
         </div>
       </div>
     </div>

@@ -36,11 +36,7 @@ function Item({ l, Products, Values }) {
   const s = v < 100 ? false : true;
 
   return (
-<<<<<<< HEAD
-    <div className="mx-10 flex justify-center items-center xl:h-20 xl:my-8 xl:w-15 xl:m-4 ">
-=======
     <div className="mx-10 flex justify-between items-center xl:h-30  xl:my-8 xl:w-15 xl:m-4 ">
->>>>>>> 879ae7df00fa2f0c52f2cd37391ba3653aa67aed
       <Brand name={n} st={s} />
       <Percent val={v} st={s} />
     </div>
