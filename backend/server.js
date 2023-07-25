@@ -81,3 +81,13 @@ app.post('/api/execute-script', (req, res) => {
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
+
+app.get('/api/data', async (req, res) => {
+  try {
+    const response = await axios.get('https://rfidhttpfunc.azurewebsites.net/api/getjoindata');
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching data from external API:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+});
