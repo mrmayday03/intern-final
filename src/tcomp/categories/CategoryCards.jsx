@@ -22,32 +22,32 @@ const categories = [
   {
     icon: health,
     name: "Health & Beauty",
-    percent: "76%",
-    color: "bg-green-500",
+    percent: "",
+    color: "bg-gray-500",
   },
   {
     icon: toy,
     name: "Toys",
-    percent: "76%",
-    color: "bg-green-500",
+    percent: "",
+    color: "bg-gray-500",
   },
   {
     icon: grocery,
     name: "Grocery",
-    percent: "70%",
-    color: "bg-red-500",
+    percent: "",
+    color: "bg-gray-500",
   },
   {
     icon: Home,
     name: "Electronics",
-    percent: "70%",
-    color: "bg-green-500",
+    percent: "",
+    color: "bg-gray-500",
   },
   {
     icon: elct,
     name: "Electronics",
-    percent: "70%",
-    color: "bg-green-500",
+    percent: "",
+    color: "bg-gray-500",
   },
 ];
 
