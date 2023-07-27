@@ -25,7 +25,7 @@ const AbstractPage = () => {
         </div>
         <div className="btns">
         <button className="btn" onClick={handleClick}>
-          Store Supervision
+          Store Supervisor
         </button>
               <button className="btn">Store Manager</button>
           <button className="btn">Store Assosciate</button>
