@@ -22,31 +22,31 @@ const categories = [
   {
     icon: health,
     name: "Health & Beauty",
-    percent: "",
+    percent: "70%",
     color: "bg-gray-500",
   },
   {
     icon: toy,
     name: "Toys",
-    percent: "",
+    percent: "60%",
     color: "bg-gray-500",
   },
   {
     icon: grocery,
     name: "Grocery",
-    percent: "",
+    percent: "89%",
     color: "bg-gray-500",
   },
   {
     icon: Home,
     name: "Electronics",
-    percent: "",
+    percent: "96%",
     color: "bg-gray-500",
   },
   {
     icon: elct,
     name: "Electronics",
-    percent: "",
+    percent: "69%",
     color: "bg-gray-500",
   },
 ];
@@ -59,7 +59,7 @@ const CategoryCards = () => {
   useEffect(() => {
     // Fetch data from the API endpoint using Axios
     axios
-      .get("https://rfidhttpfunc.azurewebsites.net/api/getjoindata")
+      .get("http://localhost:5000/api/data2")
       .then((response) => {
         setEventsCategory(response.data.eventsCategory);
         setPimCategory(response.data.pimCategory);
