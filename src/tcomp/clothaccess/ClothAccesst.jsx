@@ -19,7 +19,7 @@ const ClothAccess = () => {
         <Sidebar />
         <div className="flex flex-1 flex-col lg:w-[100vw]  ">
           <Header />
-          <div className="w-4/5 lg:h-[100vh] lg:w-auto bg-blue-100   rounded-xl p-4 lg:overflow-hidden xl:overflow-hidden ">
+          <div className="w-3/4 lg:h-[100vh] lg:w-auto bg-blue-100   rounded-xl p-4 lg:overflow-hidden xl:overflow-hidden xl:w-[90vw] mx-auto z-0 -ml-[0.5rem]">
             <div className="flex justify-between items-center lg:w-[70vw] ">
               <div className="flex items-center gap-4  lg:ml-20 ">
                 <img src={backbtn} alt="" className="h-8 " onClick={back} />

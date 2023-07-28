@@ -23,7 +23,7 @@ const categories = [
   {
     icon: health,
     name: "Health & Beauty",
-    percent: "70%",
+    percent: "-",
     color: "bg-gray-500",
   },
   {

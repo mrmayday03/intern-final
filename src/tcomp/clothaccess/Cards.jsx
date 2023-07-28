@@ -1,81 +1,140 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+// import React, { useState, useEffect } from "react";
 
+// const Cards = () => {
+//   const [data, setData] = useState({ eventsCategory: [], pimCategory: [] });
+
+//   useEffect(() => {
+//     fetch("http://localhost:5000/api/data")
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Network response was not ok");
+//         }
+//         return response.json();
+//       })
+//       .then((responseData) => {
+//         const processedData = processData(responseData);
+//         setData(processedData);
+//       })
+//       .catch((error) => console.error("Error fetching data:", error));
+//   }, []);
+
+//   const processData = (responseData) => {
+//     let wdata = [];
+//     const eventsCategoryData = responseData.eventsCategory[0];
+//     responseData.pimCategory.forEach((pimItem) => {
+//       const [category, dress, gender] = Object.keys(pimItem)[0].split("_");
+//       const pimCountValue = pimItem[Object.keys(pimItem)[0]];
+  
+//       const eventKey = `${category}_${dress}_${gender}`;
+//       const eventCount = responseData.eventsCategory[0][eventKey] || 0;
+//       const percentage = pimCountValue !== 0 ? ((eventCount / pimCountValue) * 100).toFixed(0) : 0;
+  
+//       // Create a new object for each iteration
+//       const dataObject = {
+//         subcategory: dress,
+//         gender: gender,
+//         pimCountValue: pimCountValue,
+//         eventCount: eventCount,
+//         percentage: percentage,
+//       };
+  
+//       // Push the new object into the wdata array
+//       wdata.push(dataObject);
+//     });
+  
+//     console.log("Male Data:", wdata);
+
+//     return { eventsCategory: eventsCategory, pimCategory: pimCategoryData };
+//   };
+
+//   // Function to create the small cards showing dress details and percentage
+//   const createDressCard = (item) => {
+//     return (
+//       <div
+//         key={item.subcategory}
+//         className="bg-blue-500 text-center shadow-2xl p-4 text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 rounded-lg"
+//       >
+//         <h2 className="text-xl font-roboto font-bold">{item.subcategory}</h2>
+//         <p>Percentage: {item.percentage}%</p>
+//       </div>
+//     );
+//   };
+
+//   // Function to create a gender card with embedded dress cards
+//   const createGenderCard = (gender, genderData) => {
+//     return (
+//       <div className="p-4 border border-gray-300 rounded shadow-md mb-4">
+//         <h2 className="text-lg font-semibold mb-2">{gender === 'M' ? 'Men' : 'Women'}</h2>
+//         <div className="grid grid-cols-4 gap-4">
+//           {genderData.map(createDressCard)}
+//         </div>
+//       </div>
+//     );
+//   };
+
+//   return (
+//     <div>
+//       {/* Render gender cards with embedded dress cards */}
+//       <div className="flex space-x-4">
+//         {createGenderCard('M', data.pimCategory.filter(item => item.gender === 'M'))}
+//         {createGenderCard('W', data.pimCategory.filter(item => item.gender === 'W'))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Cards;
+
+
+
+
+import React, { useState, useEffect } from "react";
+import caution from '../../assets/icons/warning_.svg';
 const Cards = () => {
   const [data, setData] = useState({ eventsCategory: [], pimCategory: [] });
 
-
   useEffect(() => {
-    // Fetch data from your backend
-    fetch('http://localhost:5000/api/data')
+    fetch("http://localhost:5000/api/data")
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         return response.json();
       })
       .then((responseData) => {
-        console.log('API Response Data:', responseData); // Log the API response data
-        // Process the data directly and set it to state
         const processedData = processData(responseData);
         setData(processedData);
       })
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  let mdata = {};
-  let wdata = [];
-
-
-  // Function to process the data and split strings
   const processData = (responseData) => {
-    responseData.pimCategory.map((pimItem) => {
+    let wdata = []; // Initialize wdata here
+
+    const eventsCategoryData = responseData.eventsCategory.length > 0
+      ? responseData.eventsCategory[0]
+      : {};
+
+    responseData.pimCategory.forEach((pimItem) => {
       const [category, dress, gender] = Object.keys(pimItem)[0].split("_");
-      console.log("console1",dress)
       const pimCountValue = pimItem[Object.keys(pimItem)[0]];
-      mdata["subcategory"] = dress;
-      mdata["gender"] = gender;
-      mdata["pimCountValue"] = pimCountValue;
-      console.log("console2",mdata)
-      console.log("console3",wdata.length)
-      wdata.push(mdata);
+      const eventKey = `${category}_${dress}_${gender}`;
+      const eventCount = eventsCategoryData[eventKey] || 0;
+      const percentage = pimCountValue !== 0 ? ((eventCount / pimCountValue) * 100).toFixed(0) : 0;
+      const dataObject = {
+        subcategory: dress,
+        gender: gender,
+        pimCountValue: pimCountValue,
+        eventCount: eventCount,
+        percentage: percentage,
+      };
+      console.log("console2", dataObject);
+      console.log("console3", wdata.length);
+      wdata.push(dataObject);
     });
-    console.log('Male Data:', wdata);
-    //console.log('Female Data:', wdata);
-
-    const eventsCategoryData = responseData.eventsCategory.map((item) => {
-      const mdata = [];
-      const wdata = [];
-      const [category, dress, gender] = Object.keys(item)[0].split("_");
-      const eventCount = item[Object.keys(item)[0]];
-
-      const pimCount = responseData.pimCategory.find(
-        (pimItem) => Object.keys(pimItem)[0] === Object.keys(item)[0]
-      );
-      const pimCountValue = pimCount ? pimCount[Object.keys(pimCount)[0]] : 0;
-      if (gender === 'M') {
-        if (!mdata[dress]) {
-          mdata[dress] = pimCountValue;
-          mdata[dress] = pimCountValue;
-        } else {
-          mdata[dress] += pimCountValue;
-        }
-      } else if (gender === 'W') {
-        if (!wdata[dress]) {
-          wdata[dress] = pimCountValue;
-        } else {
-          wdata[dress] += pimCountValue;
-        }
-      }
-      const percentage =
-        pimCountValue !== 0 ? ((eventCount / pimCountValue) * 100).toFixed(0) : 100; // If pimCountValue is 0, set percentage to 100
-
-      // console.log(category, dress, gender, eventCount, pimCountValue, percentage);
-      // console.log(Object.keys(pimCount)[0]);
-      // console.log(mdata);
-      // console.log(wdata);
-      return { category, dress, gender, eventCount, pimCountValue, percentage };
-    });
+    console.log("Male Data:", wdata);
 
     const pimCategoryData = responseData.pimCategory.map((item) => {
       const [category, dress, gender] = Object.keys(item)[0].split("_");
@@ -86,97 +145,79 @@ const Cards = () => {
       const pimCountValue = pimCount ? pimCount[Object.keys(pimCount)[0]] : 0;
       const percentage =
         pimCountValue !== 0 ? ((eventCount / pimCountValue) * 100).toFixed(0) : 100;
-      return { category, dress, gender, eventCount, pimCountValue, pimCount, percentage};
+      return {
+        category,
+        dress,
+        gender,
+        eventCount,
+        pimCountValue,
+        pimCount,
+        percentage,
+      };
     });
 
-    return { eventsCategory: eventsCategoryData, pimCategory: pimCategoryData };
+    return { eventsCategory: eventsCategoryData, pimCategory: pimCategoryData, wdata: wdata };
   };
 
-  // Define sample data for Kids category
-  const kidsData = [
-    {
-      category: 'Skirt',
-      brand: 'K',
-      eventCount: 10,
-      pimCountValue: 20,
-      percentage: 50,
-    },
-    {
-      category: 'Onesies',
-      brand: 'K',
-      eventCount: 5,
-      pimCountValue: 15,
-      percentage: 33,
-    },
-  ];
-
-  // Function to create a table row for events category
-  const createEventsCategoryTableRow = (item, index) => {
+  // Function to create the small cards showing dress details and percentage
+  const createDressCard = (item, index) => {
+    const isDanger = item.percentage < 100;
+    const cardClasses = `bg-${isDanger ? 'red' : 'blue'}-100 text-${isDanger ? 'red-500' : 'blue-500'} shadow-2xl p-4 hover:bg-red-500 hover:text-white border-2 border-${isDanger ? 'red' : 'blue'}-500 rounded-lg flex justify-between items-center`;
+  
     return (
-      <div key={index} className="flex flex-cols bg-blue-500 p-4 items-center text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 rounded-lg shadow-2xl">
-        {/* <h2 className="text-xl font-roboto font-bold">{item.brand}</h2> */}
-        <p>{item.dress}</p>
-        <p>{item.percentage}%</p>
+      <div key={item.subcategory} className={cardClasses}>
+        <div className="text-left">
+          <h2 className="text-xl font-roboto font-bold w-[10rem]">{item.subcategory}</h2>
+        </div>
+        <div className="text-right flex flex-row">
+          <p className={isDanger ? 'w-[10px]' : ''}>
+          {isDanger && (
+            <img src={caution} alt="Danger" className="h-4 w-4 p-0 ml-[12rem]"  />
+        )}
+          </p>
+          <p className="mb-15">{item.percentage}%</p>
+
+        </div>
       </div>
     );
   };
 
-  // Function to create a table row for pim category
-  const createPimCategoryTableRow = (item, index) => {
+  // Function to create a gender card with embedded dress cards
+  const createGenderCard = (gender) => {
+    const genderData = data.wdata.filter((item) => item.gender === gender);
+
     return (
-      <div key={index} className="bg-blue-500 text-center shadow-2xl p-4 text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 rounded-lg">
-        <h2 className="text-xl font-roboto font-bold">{item.brand}</h2>
-        <p>Category: {item.dress}</p>
-gender       <p>percentage: {item.percentage}</p>
+      <div className="p-4 border bg-white border-gray-300 rounded-3xl shadow-md mb-4 h-[80vh]  xl:w-[25rem] ">
+        <h2 className="text-lg font-semibold mb-2 p-[20px]">{gender === 'M' ? 'Mens Category' : 'Womens Category'}</h2>
+        <div className="grid grid-rows gap-4">
+          {genderData.map(createDressCard)}
+        </div>
       </div>
     );
   };
 
   return (
     <div>
-      <div className="grid grid-cols-4 gap-4">
-        {/* Render event category cards */}
-        {data.eventsCategory.length === 0 ? (
-          <div className="col-span-4">
-            <NoDataFoundMessage />
-          </div>
-        ) : (
-          data.eventsCategory.map(createEventsCategoryTableRow)
-        )}
-
-        {/* Render pim category cards */}
-        {data.pimCategory.length === 0 ? (
-          <div className="col-span-4">
-            <NoDataFoundMessage />
-          </div>
-        ) : (
-          data.pimCategory.map(createPimCategoryTableRow)
-        )}
-      </div>
-
-      {/* Render kids category cards */}
-      <div className="grid grid-cols-4 gap-4">
-        {kidsData.map((item, index) => (
-          <div
-            key={index}
-            className="bg-blue-500 text-center shadow-2xl p-4 text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 rounded-lg"
-          >
-            <h2 className="text-xl font-roboto font-bold">{item.brand}</h2>
-            <p>Category: {item.category}</p>
-            <p>Percentage: {item.percentage}%</p>
-          </div>
-        ))}
-      </div>
+      {/* Render gender cards with embedded dress cards */}
+      {data.eventsCategory.length === 0 || data.pimCategory.length === 0 ? (
+        <div>No data found for this category.</div>
+      ) : (
+        <div className="grid grid-flow-col m-10">
+          {createGenderCard('M')}
+          {createGenderCard('W')}
+          {createGenderCard('K')}
+        </div>
+      )}
     </div>
   );
 };
 
-// Function to display "No data found" message
-const NoDataFoundMessage = () => {
-  return <p>No data found for this category.</p>;
-};
-
 export default Cards;
+
+
+
+
+
 // import React, { useEffect, useState } from 'react';
 // import caution from '../../assets/icons/warning_.svg';
 // import { useNavigate } from 'react-router-dom';
@@ -235,13 +276,10 @@ export default Cards;
 //     console.log(eventData)
 //   }
 
-
 //   useEffect(()=>{
 //      fetchData();
 //     //  console.log(eventData);
 // },)
-
-
 
 //   const handleCategoryClick = () => {
 //     navigate('/clothing/menswear');
