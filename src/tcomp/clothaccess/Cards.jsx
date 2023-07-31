@@ -91,10 +91,14 @@
 
 
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import caution from '../../assets/icons/warning_.svg';
 const Cards = () => {
   const [data, setData] = useState({ eventsCategory: [], pimCategory: [] });
-
+  const nav = useNavigate();
+  const nextPage = () => {
+    nav("/clothing/menswear");
+  };
   useEffect(() => {
     fetch("http://localhost:5000/api/data")
       .then((response) => {
@@ -165,7 +169,7 @@ const Cards = () => {
     const cardClasses = `bg-${isDanger ? 'red' : 'blue'}-100 text-${isDanger ? 'red-500' : 'blue-500'} shadow-2xl p-4 hover:bg-red-500 hover:text-white border-2 border-${isDanger ? 'red' : 'blue'}-500 rounded-lg flex justify-between items-center`;
   
     return (
-      <div key={item.subcategory} className={cardClasses}>
+      <div key={item.subcategory} className={cardClasses} onClick={nextPage}>
         <div className="text-left">
           <h2 className="text-xl font-roboto font-bold w-[10rem]">{item.subcategory}</h2>
         </div>
@@ -185,12 +189,16 @@ const Cards = () => {
   // Function to create a gender card with embedded dress cards
   const createGenderCard = (gender) => {
     const genderData = data.wdata.filter((item) => item.gender === gender);
-
+  
     return (
       <div className="p-4 border bg-white border-gray-300 rounded-3xl shadow-md mb-4 h-[80vh]  xl:w-[25rem] ">
         <h2 className="text-lg font-semibold mb-2 p-[20px]">{gender === 'M' ? 'Mens Category' : 'Womens Category'}</h2>
         <div className="grid grid-rows gap-4">
-          {genderData.map(createDressCard)}
+          {genderData.length === 0 ? (
+            <div className="text-center text-gray-500">No data found</div>
+          ) : (
+            genderData.map(createDressCard)
+          )}
         </div>
       </div>
     );

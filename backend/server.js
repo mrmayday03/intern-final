@@ -101,3 +101,12 @@ app.get('/api/data2', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
+app.get('/api/data3', async (req, res) => {
+  try {
+    const response = await axios.get('https://rfidpimdata.azurewebsites.net/api/getbranddata');
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching data from external API:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+});

@@ -99,8 +99,8 @@ const NonCompliantProducts = () => {
   return (
     <div className="mb-10 lg:h-[10rem] xl:h-[18rem] ">
       <div className="flex justify-between items-center xl:mb-10  ">
-        <div className="text-lg font-semibold xl:text-xl ">Non-Compliant Products on shelf
-        <div className="text-lg pt-5 lg:pt-1 font-thin  xl:text-xl">Shelf no: 04B</div>
+        <div className="  text-gray-500  font-bold xl:text-xl ">Non-Compliant Products on shelf
+        <div className="text-lg xl:pt-5 lg:pt-1 font-thin  xl:text-xl">Shelf no: 04B</div>
         </div>
         <button
           className="bg-blue-100 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded-xl flex items-center"

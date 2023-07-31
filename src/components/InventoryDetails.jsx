@@ -32,10 +32,10 @@ const InventoryDetails = () => {
           <tbody>
             {quantities.map((quantity) => (
               <tr key={quantity.id}>
-                <td className="bg-blue-100 text-slate-500 lg:text-sm xl:text-lg lg:py-2 xl:py-4 lg:pl-6  lg:px-4 xl:px-7 rounded-l">
+                <td className="bg-blue-100 text-slate-500 font-semibold lg:text-sm xl:text-lg lg:py-2 xl:py-4 lg:pl-6  lg:px-4 xl:px-7 rounded-l">
                   QTY
                 </td>
-                <td className="bg-blue-100 py-2 px-8 pr-14 rounded-r text-blue-800 text-sm">
+                <td className="bg-blue-100 py-2 px-8 pr-14 rounded-r font-semibold text-xl text-blue-800">
                   {quantity.quantity} units
                 </td>
               </tr>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import "../components/success.css";
 
@@ -10,10 +11,10 @@ function Success({setOpenSuccess}) {
                 <button className="close" onClick={() => {
                         setOpenSuccess(false);
                     }}>
-                        <i class='bx bx-x'></i>
+                        <i className='bx bx-x'></i>
                 </button>
                 <div className="tick">
-                <i class='bx bx-check' ></i>
+                <i className='bx bx-check' ></i>
                 </div>
                 <div className="cont">
                     <p>Inventory notification sent to</p>
